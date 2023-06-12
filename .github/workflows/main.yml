@@ -18,8 +18,8 @@ jobs:
       - name: Add remote
         env:
           HF: ${{ secrets.HF }}
-        run: git remote add space https://huggingface.co/spaces/jchhabria/Demo
+        run: git remote add space https://jchhabria:$HF@huggingface.co/spaces/jchhabria/Demo
       - name: Push to hub
         env:
           HF: ${{ secrets.HF }}
-        run: git push --force https://huggingface.co/spaces/jchhabria/Demo main
+        run: git push --force https://jchhabria:$HF@huggingface.co/spaces/jchhabria/Demo main
